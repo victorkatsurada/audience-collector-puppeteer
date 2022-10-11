@@ -42,5 +42,5 @@ async function main() {
 ```
 ### Para executar a aplicação
 ```
-node index.js
+$ node index.js
 ```
