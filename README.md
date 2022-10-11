@@ -6,7 +6,7 @@
 ### Installation
 To  start scrapper, npm install
 ```
-npm intall
+npm install
 ```
 To use Puppeteer in your project, run:
 ```
