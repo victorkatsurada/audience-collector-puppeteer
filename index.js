@@ -10,6 +10,7 @@ const audience = [];
 const generalData = {
   loginStep:{
     userData: {
+      // add your credencial
       userLogin: 'user login',
       userPassword: 'user password'
     },
