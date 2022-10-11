@@ -1,22 +1,46 @@
 # Audience Collector Puppeteer
 <!-- [START badges] -->
-## Getting Started
+ Com esse projeto é possível coletar a população de diversas audiências de forma automática. A automação gera um arquivo em formato xlsx contendo informações de população, nome da audiência, id da audiência e dia atual.
+
+## Como executar
 
 
-### Installation
-To  start scrapper, npm install
+### Instalação
+Para iniciar a utilização da aplicação é necessário seguir as seguintes etapas de instalação:
+
 ```
-npm install
+$ npm install
+
+$ npm i puppeteer
+
+$ npm install xlsx
 ```
-To use Puppeteer in your project, run:
+
+### Ajuste no código
+
+1- É necessário adequar o código para suas necessidades. No arquivo *index.js* ajuste:
+
+1.1- Adicione seu email e senha do login Adobe.
+
 ```
-npm i puppeteer
+// adicione seu email e senha do login adobe
+userLogin: 'user login',
+userPassword: 'user password'
 ```
-To use xlxs in your project, run:
+1.2- Adicione as URLs das audiências que deseja acompanhar a evolução das populações.
 ```
-npm install xlsx
+async function main() {
+  await crawler('audience url');
+  /* add new urls bellow:
+  await crawler('other urls')
+  .
+  .
+  .
+  */
+  await writeFiles();
+}
 ```
-To run
+### Para executar a aplicação
 ```
 node index.js
 ```
